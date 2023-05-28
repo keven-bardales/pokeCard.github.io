@@ -24,6 +24,22 @@ body {
   min-height: 100vh;
   display: grid;
   place-items: center;
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
+
+body::-webkit-scrollbar {
+  width: 0.5em;
+  background-color: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+/*Webkit(Chrome, Android browser, Safari, Edge...)*/
+section::-webkit-scrollbar {
+  display: none;
 }
 
 #pagina_pokemon_info {
