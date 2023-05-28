@@ -8,45 +8,36 @@
     <title>Pkemon</title>
   </head>
   <body>
-    <section id="pagina_pokemon_info">
-      <div id="mainContainer">
-        <div id="divImagen">
-          <img id="imagenPokemon" src="" alt="" />
-        </div>
-        <div id="datosPokemon">
-          <h2>Informacion de Pokemon</h2>
-          <h3 id="nombrePokemon">Nombre</h3>
+    <div id="pagina_pokemon_info">
+      <div id="divImagen">
+        <img id="imagenPokemon" src="" alt="" />
+      </div>
+      <div id="datosPokemon">
+        <h2>Informacion de Pokemon</h2>
+        <h3 id="nombrePokemon">Nombre</h3>
 
-          <div>
-            <h2>Tipos</h2>
-            <article id="tiposPokemon"></article>
-          </div>
-          <div>
-            <h2>Peso</h2>
-            <span id="pesoPokemon"></span>
-          </div>
-          <div>
-            <h2>Altura</h2>
-            <span id="alturaPokemon"></span>
-          </div>
-          <div id="botonesPokemon">
-            <span id="botonAnterior">Anterior</span>
-            <span id="idPokemon">0</span>
-            <span id="botonSiguiente">Siguiente</span>
-          </div>
+        <h2>Tipos</h2>
+        <div id="tiposPokemon"></div>
+        <div id="alturaPeso">
+          <h2>Peso:</h2>
+          <span id="pesoPokemon"></span>
+          <h2>Altura:</h2>
+          <span id="alturaPokemon"></span>
         </div>
-        <div id="MovimientosStats">
-          <div id="divMovimientos">
-            <h2>Movimientos</h2>
-            <article id="movimientosPokemon"></article>
-          </div>
-          <div id="divEstadisticas">
-            <h2>Estadisticas</h2>
-            <article id="estadisticasPokemon"></article>
-          </div>
+
+        <div id="botonesPokemon">
+          <span id="botonAnterior">Anterior</span>
+          <span id="idPokemon">0</span>
+          <span id="botonSiguiente">Siguiente</span>
         </div>
       </div>
-    </section>
+      <div id="MovimientosStats">
+        <h2>Estadisticas</h2>
+        <div id="divEstadisticas"></div>
+        <h2>Movimientos</h2>
+        <div id="divMovimientos"></div>
+      </div>
+    </div>
 
     <script src="./js/main.js"></script>
   </body>

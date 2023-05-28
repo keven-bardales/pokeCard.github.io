@@ -3,9 +3,14 @@
   src: url('./pokemon_Font/Pokemon\ Solid.ttf') format('truetype');
 }
 
+:root {
+  --color-fondo: #ffffff;
+}
+
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
   text-decoration: none;
   list-style: none;
 }
@@ -14,162 +19,202 @@ html {
   font-family: 'pokemonFont';
 }
 
+body {
+  line-height: 1.6;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
 #pagina_pokemon_info {
   width: 80%;
+  max-width: 1000px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  margin: 5vh auto;
+  display: flex;
+  flex-direction: column;
+  background: var(--color-fondo);
+  text-align: center;
+  padding: 2em;
+  padding-bottom: 2em !important;
   overflow: hidden;
+  gap: 2em;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 
-#mainContainer {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 1em;
-  border-radius: 1em;
-  overflow: hidden;
+#pagina_pokemon_info > * {
+  flex-grow: 1;
 }
 
-#divImagen {
-  flex-basis: 49%;
-  display: flex;
-  justify-content: center;
-  border-radius: 1em 1em 0em 0em;
-  background-color: cadetblue;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 #datosPokemon {
-  flex-basis: 49%;
-  background-color: yellowgreen;
-  text-align: center;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  background-color: cadetblue;
-  border-radius: 1em 1em 0em 0em;
+  background-color: white;
+  padding: 3em;
+  border-radius: 2em;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 
-#datosPokemon > h2 {
-  flex-basis: 100%;
+#datosPokemon > div,
+#nombrePokemon {
+  margin-top: 2em;
 }
 
 #nombrePokemon {
-  width: 100%;
   font-size: 2em;
+  margin-top: 1em;
 }
 
-#datosPokemon > div {
-  flex-basis: 50%;
+#tiposPokemon {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1em;
 }
 
-#tiposPokemon span {
-  margin-left: 1em;
+#tiposPokemon h2 {
+  flex-basis: 100%;
+}
+
+#alturaPeso {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 #MovimientosStats {
   display: flex;
+  flex-direction: column;
+  gap: 1em;
+  background-color: white;
+  padding: 1em;
+  overflow: scroll;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+#divMovimientos {
+  display: flex;
+  overflow: scroll;
+  align-items: center;
+}
+
+#divMovimientos span {
+  text-align: center;
+  font-size: 0.8em;
+  line-height: 1.5em;
+  width: 80px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  height: 5em;
+  padding: 1em;
+  margin-left: 3em;
+  background-color: var(--color-fondo);
+  border-radius: 1em;
+  flex-grow: 1;
+  margin-top: 1em;
+}
+
+#divEstadisticas {
+  display: flex;
   flex-wrap: wrap;
-  flex-basis: 100%;
-  justify-content: space-between;
-  border-bottom-left-radius: 1em;
-  border-bottom-right-radius: 1em;
-  overflow: hidden;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  align-items: center;
+  gap: 1em;
+}
+
+#divEstadisticas span {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  font-size: 0.8em;
+  flex-basis: 45%;
+  flex-grow: 1;
+  justify-content: center;
+  height: 5em;
+  text-align: center;
+  padding: 1.5em 0.5em;
+  background-color: var(--color-fondo);
+  margin-top: 1em;
+  flex-wrap: wrap;
+  border-radius: 1em;
 }
 
 #botonesPokemon {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 1em;
-  overflow: hidden;
-}
-
-#divMovimientos {
-  flex-basis: 49%;
-  display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
-  padding-top: 1em;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
-
-#divMovimientos h2 {
-  text-align: center;
-  color: black;
-  flex-basis: 100%;
-}
-
-#movimientosPokemon {
-  overflow-y: scroll;
-  min-height: 200px;
-  max-height: 200px;
-  flex-basis: 100%;
-  flex-wrap: wrap;
-  display: flex;
-  justify-content: space-between;
-  padding: 1em;
-}
-
-#movimientosPokemon span {
-  text-align: center;
-  display: inline-block;
-  color: black;
-  flex-basis: 20%;
-  max-height: 1em;
-  padding: 0.5em;
-  background-color: #ccc;
-  margin-top: 1em;
-  border-radius: 1em;
-  line-height: 1em;
-}
-
-#divEstadisticas {
-  padding-top: 1em;
-  flex-basis: 49%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
-
-#divEstadisticas h2 {
-  text-align: center;
-  color: black;
-  flex-basis: 100%;
-}
-
-#estadisticasPokemon {
-  min-height: 200px;
-  max-height: 200px;
-  flex-basis: 100%;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-content: center;
-  gap: 0.5em;
-  padding: 1em;
-}
-
-#estadisticasPokemon span {
-  text-align: center;
-  padding: 1em;
-  max-height: 1em;
-  width: 25%;
-  background-color: #ccc;
-  margin-top: 1em;
-  border-radius: 1em;
-  line-height: 1em;
+  justify-content: space-evenly;
+  padding: 0.5em 0;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 
 #botonesPokemon span {
-  display: inline-block;
-  padding: 0.5em;
-  background-color: antiquewhite;
   cursor: pointer;
-  border: 2px solid black;
+  border: 3px solid black;
+  padding: 0.5em;
+  text-align: center;
+  width: 28%;
+  flex-grow: 1;
+}
+
+#botonesPokemon span:nth-child(2) {
+  order: 1;
+  flex-basis: 100%;
+}
+
+#botonesPokemon span:nth-child(1) {
+  order: 2;
+}
+
+#botonesPokemon span:nth-child(3) {
+  order: 3;
+}
+
+@media (min-width: 1000px) {
+  #pagina_pokemon_info {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    max-height: 800px;
+    overflow: scroll;
+  }
+
+  #MovimientosStats {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 2em;
+  }
+
+  #MovimientosStats h2 {
+    flex-basis: 48%;
+  }
+
+  #MovimientosStats :nth-child(1) {
+    order: 1;
+  }
+
+  #MovimientosStats :nth-child(3) {
+    order: 1;
+  }
+
+  #MovimientosStats :nth-child(2) {
+    order: 2;
+  }
+
+  #MovimientosStats :nth-child(4) {
+    order: 2;
+  }
+
+  #MovimientosStats > div {
+    flex-basis: 49%;
+  }
+
+  #divMovimientos {
+    flex-wrap: wrap;
+    max-height: 300px;
+    justify-content: center;
+    max-height: 250px;
+  }
 }
